@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board: nrf52840dk_nrf52840
+  - board: nice_nano_v2
     shield: nvew_right
   # - board: nrf52840dk_nrf52840
   #   shield: nvew_left
