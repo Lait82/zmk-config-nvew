@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano
-    shield: nvew_right
+    shield: nvew
   # - board: nrf52840dk_nrf52840
   #   shield: nvew_left

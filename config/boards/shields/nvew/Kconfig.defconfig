@@ -1,4 +1,4 @@
-if SHIELD_NVEW_RIGHT
+if SHIELD_NVEW
 
 config ZMK_KEYBOARD_NAME
     default "NVEW"

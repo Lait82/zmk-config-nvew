@@ -1,2 +1,0 @@
-config SHIELD_NVEW_RIGHT
-    def_bool $(shields_lists_contains,nvew_right)
