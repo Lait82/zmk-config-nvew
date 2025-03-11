@@ -10,7 +10,7 @@
             bindings = <
             &kp 0   &kp 1           &kp 2           &kp 3
             &kp A   &kp B           &kp C           &mo 1
-                    &kp LEFT_SHIFT  &kp L_COMMAND   &kp LEFT_CONTROL
+            &none   &kp LEFT_SHIFT  &kp L_COMMAND   &kp LEFT_CONTROL
             >;
         };
 
@@ -18,7 +18,7 @@
             bindings = <
             &none       &BT_CLR         &none           &bootloader
             &none       &none           &none           &none
-                        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
+            &none       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
             >;
         };
     };
