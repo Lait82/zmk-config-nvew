@@ -12,14 +12,7 @@
                     <&pro_micro 21 GPIO_ACTIVE_HIGH>;
     };
 
-    default_transform: matrix_transform {
-        &default_transform {
-            col-offset = <1>;
-        };
-        map = <
-            RC(0,0) RC(0,1) RC(0,2)
-            RC(1,0) RC(1,1) RC(1,2)
-            RC(2,0) RC(2,1) RC(2,2)
-        >;
+    &default_transform {
+        col-offset = <1>;
     };
 };
