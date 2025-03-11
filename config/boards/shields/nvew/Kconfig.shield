@@ -1,2 +1,5 @@
-config SHIELD_NVEW
-    def_bool $(shields_list_contains,nvew)
+config SHIELD_NVEW_RIGHT
+    def_bool $(shields_list_contains,nvew_right)
+
+config SHIELD_NVEW_LEFT
+    def_bool $(shields_list_contains,nvew_left)

@@ -18,8 +18,10 @@
 #     artifact-name: corne_left_with_studio
 #
 ---
-include:
-  - board: nice_nano
-    shield: nvew
-  # - board: nrf52840dk_nrf52840
-  #   shield: nvew_left
+board: ["nice_nano"]
+shield: ["nvew_left", "nvew_right"]
+# include:
+#   - board: nice_nano
+#     shield: nvew
+#   - board: nice_nano
+#     shield: nvew_left

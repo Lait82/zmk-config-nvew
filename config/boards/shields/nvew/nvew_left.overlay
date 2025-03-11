@@ -1,0 +1,18 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include "nvew.dtsi"
+
+/ {
+    kscan0: kscan {
+        row-gpios = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+    
+        col-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
+    };
+
+    default_transform: matrix_transform {
+        map = <
+            RC(0,0)
+            RC(1,0)
+        >;
+    };
+};

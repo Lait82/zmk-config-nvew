@@ -1,16 +1,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "nvew.dtsi"
 
 / {
-    chosen {
-        zmk,kscan = &default_kscan;
-        zmk,matrix_transform = &default_transform;
-    };
-
-    default_kscan: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        label = "default_kscan";
-        diode-direction = "col2row";
-
+    kscan0: kscan {
         row-gpios = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
@@ -21,10 +13,9 @@
     };
 
     default_transform: matrix_transform {
-        compatible = "zmk,matrix-transform";
-        rows = <3>;
-        columns = <3>;
-
+        &default_transform {
+            col-offset = <1>;
+        };
         map = <
             RC(0,0) RC(0,1) RC(0,2)
             RC(1,0) RC(1,1) RC(1,2)
