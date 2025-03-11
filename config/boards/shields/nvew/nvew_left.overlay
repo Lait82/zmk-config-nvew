@@ -8,11 +8,4 @@
     
         col-gpios = <&pro_micro 8 GPIO_ACTIVE_HIGH>;
     };
-
-    default_transform: matrix_transform {
-        map = <
-            RC(0,0)
-            RC(1,0)
-        >;
-    };
 };
