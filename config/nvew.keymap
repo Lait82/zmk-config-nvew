@@ -8,9 +8,9 @@
 
         default_layer {
             bindings = <
-                &kp D      &kp F      &kp G      &kp S    // Row 1: Leftmost key is on the left half, the rest on the right half
-                &kp A      &kp B      &kp C      &mo 1    // Row 2: Leftmost key is on the left half, the rest on the right half
-                &none      &kp LSFT   &kp LGUI   &kp LCTRL  // Row 3: Left half has no key in this row
+                &bt BT_CLR          &kp K        &kp N      &kp D    // Row 1: Leftmost key is on the left half, the rest on the right half
+                &bt BT_CLR_ALL      &kp B        &kp C      &mo (1)    // Row 2: Leftmost key is on the left half, the rest on the right half
+                &none               &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2  // Row 3: Left half has no key in this row
             >;
         };
 
