@@ -1,0 +1,25 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {  
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &bt BT_CLR          &kp K        &kp N      &kp D    // Row 1: Leftmost key is on the left half, the rest on the right half
+                &bt BT_CLR_ALL      &kp B        &kp C      &mo (1)    // Row 2: Leftmost key is on the left half, the rest on the right half
+                &none               &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2  // Row 3: Left half has no key in this row
+            >;
+        };
+
+        bt_layer {
+            bindings = <
+            &none       &bt BT_CLR      &none           &bootloader
+            &none       &none           &none           &none
+            &none       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2
+            >;
+        };
+    };
+};
