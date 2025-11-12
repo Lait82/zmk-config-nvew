@@ -13,6 +13,8 @@
             &kp C_VOLUME_UP     &kp B           &kp N       &kp M       &kp COMMA   &kp .       &none  // Row 1: Leftmost key is on the left half, the rest on the right half
             &RSHIFT             &kp SPACE       &kp DEL     &kp END     &none       &none       &none  // Row 1: Leftmost key is on the left half, the rest on the right half
             >;
+            sensor-bindings = <&encoder0 &kp MS_WH_UP>,
+                  <&encoder0 &kp MS_WH_DOWN>;
         };
     };
 };
