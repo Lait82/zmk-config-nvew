@@ -17,7 +17,6 @@
     };
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "NVEW Left Matrix";
         diode-direction = "col2row";
         wakeup-source;
         
