@@ -1,31 +1,18 @@
 if SHIELD_NVEW_LEFT || SHIELD_NVEW_RIGHT
 
-# Nombre visible del teclado (mismo nombre para ambas mitades)
 config ZMK_KEYBOARD_NAME
     default "NVEW"
 
-# Habilitar split (ZMK entiende que hay 2 mitades)
 config ZMK_SPLIT
     default y
 
-# Habilitar split sobre BLE (si está disponible en tu versión)
 config ZMK_SPLIT_BLE
-    default y
-
-config CONFIG_ZMK_SLEEP
-    default y
-
-config CONFIG_BT_CTLR_TX_PWR_PLUS_8
-    default y
-
-
-config CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC
     default y
 
 endif
 
 if SHIELD_NVEW_RIGHT
-# Mitad derecha será CENTRAL (se empareja con el host)
+# Mitad derecha = CENTRAL (host BLE + OLED)
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
@@ -40,7 +27,7 @@ config ZMK_DISPLAY_STATUS_SCREEN
 endif
 
 if SHIELD_NVEW_LEFT
-# Mitad izquierda será PERIPHERAL (se conecta a la derecha)
+# Mitad izquierda = PERIPHERAL
 config ZMK_SPLIT_ROLE_PERIPHERAL
     default y
 endif

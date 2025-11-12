@@ -3,3 +3,15 @@ config SHIELD_NVEW_RIGHT
 
 config SHIELD_NVEW_LEFT
     def_bool $(shields_list_contains,nvew_left)
+
+config ZMK_DISPLAY
+    bool "Enable OLED display support"
+    default n
+
+config SSD1306
+    bool "Enable SSD1306 OLED driver"
+    default n
+
+config ZMK_DISPLAY_STATUS_SCREEN
+    bool "Enable ZMK status screen on OLED"
+    default n
