@@ -12,7 +12,6 @@ config ZMK_SPLIT_BLE
 endif
 
 if SHIELD_NVEW_RIGHT
-# Mitad derecha = CENTRAL (host BLE + OLED)
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
@@ -27,7 +26,6 @@ config ZMK_DISPLAY_STATUS_SCREEN
 endif
 
 if SHIELD_NVEW_LEFT
-# Mitad izquierda = PERIPHERAL
-config ZMK_SPLIT_ROLE_PERIPHERAL
-    default y
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
 endif
