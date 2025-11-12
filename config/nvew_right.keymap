@@ -13,7 +13,7 @@
             &kp C_VOLUME_UP     &kp B           &kp N       &kp M       &kp COMMA   &kp DOT
             &RSHIFT             &kp SPACE       &kp DEL     &kp END                   
             >;
-            sensor-bindings = <&inc_dec_kp MS_WH_UP MS_WH_DOWN>;
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN>;
         };
     };
 };
