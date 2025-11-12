@@ -1,0 +1,25 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    compatible= "zmk,keyboard";
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
+    };
+    default_transform: keymap_transform{
+        compatible = "zmk,matrix-transform";
+        columns = <1>;
+        rows = <2>;
+    };
+};
+kscan0: kscan {
+    compatible = "zmk,kscan-gpio-matrix";
+    label = "NVEW Left Matrix";
+    diode-direction = <COL2ROW>;
+    wakeup-source;
+    
+    row-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+    <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+    col-gpios = <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+};

@@ -1,0 +1,45 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {    
+    compatible = "zmk,keyboard";
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &default_transform;
+    };
+
+    default_transform: keymap_transform {
+        compatible = "zmk,matrix-transform";
+        columns = <7>;
+        rows = <4>;
+    };    
+};
+
+kscan0: kscan {
+    compatible = "zmk,kscan-gpio-matrix";
+
+    row-gpios = <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Row 1 from the schematic file
+        , <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Row 2 from the schematic file
+        , <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Row 3 from the schematic file
+        , <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Row 4 from the schematic file
+        ;
+
+    col-gpios = <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 1 from the schematic file
+        , <&gpio1 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 2 from the schematic file
+        , <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 3 from the schematic file
+        , <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 4 from the schematic file
+        , <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 5 from the schematic file
+        , <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 6 from the schematic file
+        , <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Col 7 from the schematic file
+        ;
+};
+
+encoder_ruedita: encoder {
+    compatible = "zmk,behavior-rotary-encoder";
+    label = "Ruedita scroll";
+
+    gpios = <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,
+            <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+    bindings = <&encoder_ccw &kp MS_WH_DOWN>,
+               <&encoder_cw &kp MS_WH_UP>;
+};
