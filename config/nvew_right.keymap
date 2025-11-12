@@ -8,10 +8,10 @@
 
         default_layer {
             bindings = <
-            &none               &kp Y           &kp U       &kp I       &kp O       &kp P       &none  // Row 1: Leftmost key is on the left half, the rest on the right half
-            &kp C_VOLUME_UP     &kp H           &kp J       &kp K       &kp L       &kp Ñ       &ENTER  // Row 1: Leftmost key is on the left half, the rest on the right half
-            &kp C_VOLUME_UP     &kp B           &kp N       &kp M       &kp COMMA   &kp .       &none  // Row 1: Leftmost key is on the left half, the rest on the right half
-            &RSHIFT             &kp SPACE       &kp DEL     &kp END     &none       &none       &none  // Row 1: Leftmost key is on the left half, the rest on the right half
+                                &kp Y           &kp U       &kp I       &kp O       &kp P       
+            &kp C_VOLUME_UP     &kp H           &kp J       &kp K       &kp L       &kp Ñ       &ENTER
+            &kp C_VOLUME_UP     &kp B           &kp N       &kp M       &kp COMMA   &kp .       
+            &RSHIFT             &kp SPACE       &kp DEL     &kp END                   
             >;
             sensor-bindings = <&encoder0 &kp MS_WH_UP>,
                   <&encoder0 &kp MS_WH_DOWN>;
