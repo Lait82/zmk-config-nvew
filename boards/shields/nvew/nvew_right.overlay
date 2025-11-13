@@ -52,25 +52,26 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder0>;
     };
-};
-&i2c1 {
-    status = "okay";
-
-    ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        prechargep = <2>;
-        com-invdir = <0>;
-        scan-dir-remap = <1>;
-        segment-remap = <1>;
-        contrast = <0x7F>;
-        vcomh = <0x20>;
-        page-offset = <0>;
+    
+    &i2c1 {
+        status = "okay";
+    
+        ssd1306@3c {
+            compatible = "solomon,ssd1306fb";
+            reg = <0x3c>;
+            width = <128>;
+            height = <32>;
+            segment-offset = <0>;
+            page-offset = <0>;
+            display-offset = <0>;
+            multiplex-ratio = <31>;
+            prechargep = <2>;
+            com-invdir = <0>;
+            scan-dir-remap = <1>;
+            segment-remap = <1>;
+            contrast = <0x7F>;
+            vcomh = <0x20>;
+            page-offset = <0>;
+        };
     };
 };
