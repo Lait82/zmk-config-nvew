@@ -71,8 +71,7 @@
         prechargep = <2>;
         com-invdir = <0>;
         scan-dir-remap = <1>;
-        segment-remap = <1>;
-        contrast = <0x7F>;
+        contrast = <0xFF>;
         vcomh = <0x20>;
     };
 };
