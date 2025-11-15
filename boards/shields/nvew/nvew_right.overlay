@@ -72,7 +72,6 @@
         b-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 
         steps = <24>;
-        triggers-per-rotation = <24>;
         status = "okay";
     };
 
