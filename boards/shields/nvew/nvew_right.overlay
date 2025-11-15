@@ -69,7 +69,6 @@
         display-offset = <0>;
         multiplex-ratio = <31>;
         prechargep = <2>;
-        com-invdir = <0>;
         scan-dir-remap = <1>;
         contrast = <0xFF>;
         vcomh = <0x20>;
