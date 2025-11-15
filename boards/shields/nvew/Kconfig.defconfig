@@ -23,6 +23,13 @@ config ZMK_DISPLAY
 
 config ZMK_DISPLAY_STATUS_SCREEN
     default y
+
+config CONFIG_EC11
+    default y
+
+config CONFIG_EC11_TRIGGER_GLOBAL_THREAD
+    default y
+
 endif
 
 if SHIELD_NVEW_LEFT

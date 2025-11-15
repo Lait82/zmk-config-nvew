@@ -15,3 +15,9 @@ config SSD1306
 config ZMK_DISPLAY_STATUS_SCREEN
     bool "Enable ZMK status screen on OLED"
     default n
+
+config CONFIG_EC11
+    default n
+
+config CONFIG_EC11_TRIGGER_GLOBAL_THREAD
+    default n
