@@ -69,7 +69,6 @@
         display-offset = <0>;
         multiplex-ratio = <31>;
         prechargep = <2>;
-        contrast = <0xFF>;
     };
 };
 
