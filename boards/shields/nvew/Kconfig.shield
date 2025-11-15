@@ -17,7 +17,9 @@ config ZMK_DISPLAY_STATUS_SCREEN
     default n
 
 config CONFIG_EC11
+    bool "Enable wheel encoder"
     default n
 
 config CONFIG_EC11_TRIGGER_GLOBAL_THREAD
+    bool "Run the wheel encoder on the global thread"
     default n
