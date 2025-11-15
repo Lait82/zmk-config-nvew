@@ -15,10 +15,10 @@ if SHIELD_NVEW_RIGHT
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-config ZMK_DISPLAY
+config SSD1306
     default y
 
-config SSD1306
+config ZMK_DISPLAY
     default y
 
 config ZMK_DISPLAY_STATUS_SCREEN

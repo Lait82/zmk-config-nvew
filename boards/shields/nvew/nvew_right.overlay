@@ -52,10 +52,12 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder0>;
     };
-    
+
     &i2c1 {
         status = "okay";
-    
+        pinctrl-0 = <&i2c1_default>;
+        pinctrl-names = "default";
+
         ssd1306@3c {
             compatible = "solomon,ssd1306fb";
             reg = <0x3c>;
@@ -71,7 +73,14 @@
             segment-remap = <1>;
             contrast = <0x7F>;
             vcomh = <0x20>;
-            page-offset = <0>;
+        };
+    };
+};
+
+&pinctrl {
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 0, 8)>, <NRF_PSEL(TWIM_SDA, 0, 6)>;
         };
     };
 };
